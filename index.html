@@ -20,17 +20,17 @@
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-3 align-center">
+                <div class="col-3 align-center logo-column">
                     <a href="index.html" class="main-logo">
-                        <h1 style="margin: 0;font-family: var(--lobster-two);">CAPPE</h1>
+                        <h1 class="" style="margin: 0;font-family: var(--lobster-two);">CAPPE</h1>
                     </a>
                 </div>
                 <div class="col-9 align-center" style="justify-content: flex-end;">
                     <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
+                        <div class="container-fluid" style="display: grid;">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                                aria-expanded="false" aria-label="Toggle navigation" style="align-self: flex-end;">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-12">
+                <div class="col-lg-4 col-12 about-column">
                     <h3 class="sub-heading">Our Story</h3>
                     <p class="content">A coffee shop, where every cup tells a story! Founded in 2009, we began as a
                         small, cozy corner in the heart of the city, fueled by a passion for exceptional coffee and a
@@ -137,10 +137,10 @@
                         for many more years to come!</p>
                     <button class="btn-outline first-button">Read more</button>
                 </div>
-                <div class="col-md-4 col-12 align-justify-center">
+                <div class="col-lg-4 col-12 align-justify-center about-column">
                     <img src="img/about.png" alt="" width="100%">
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-lg-4 col-12 about-column">
                     <h3 class="sub-heading">Our Vision</h3>
                     <p class="content">At COPPE, our vision is to create a vibrant community hub where coffee lovers can
                         come together to share experiences, ideas, and inspiration. We believe that coffee is more than
@@ -228,7 +228,7 @@
                             <div class="col-md-4 section-inner-columns align-justify-center">
                                 <img src="img/service-2.jpg" alt="">
                             </div>
-                            <div class="col-md-8 section-inner-columns">
+                            <div class="col-md-8 section-inner-columns align-justify-center">
                                 <div class="section-details">
                                     <h5>
                                         <div class="section-icons align-justify-center">
@@ -248,7 +248,7 @@
                             <div class="col-md-4 section-inner-columns align-justify-center">
                                 <img src="img/service-4.jpg" alt="">
                             </div>
-                            <div class="col-md-8 section-inner-columns">
+                            <div class="col-md-8 section-inner-columns align-justify-center">
                                 <div class="section-details">
                                     <h5>
                                         <div class="section-icons align-justify-center">
@@ -282,9 +282,9 @@
             <div class="row">
                 <div class="col-12" style="padding: 0;">
                     <div class="background-details align-justify-center">
-                        <h1 style="color: var(--orange);font-size: 80px;">50% OFF</h1>
-                        <h3 style="color: var(--white);font-size: 30px;">Sunday Special Offer</h3>
-                        <h4 style="font-family: var(--lobster-two);font-size: 30px; color: var(--white);">Only for
+                        <h1 class="heading" style="font-family: var(--montserrat);">50% OFF</h1>
+                        <h3>Sunday Special Offer</h3>
+                        <h4 class="sub-heading" style="text-decoration: none;">Only for
                             Sunday from 1st Feb to 28th Feb 2025</h4>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Your Email"
@@ -322,7 +322,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                     <h3 class="sub-heading" style="text-align: center;">Hot Coffee</h3>
                     <div class="menu-container">
                         <div class="col-3">
@@ -383,7 +383,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                     <h3 class="sub-heading" style="text-align: center;">Cold Coffee</h3>
                     <div class="menu-container">
                         <div class="col-3">
@@ -465,8 +465,8 @@
                 <div class="col-md-6 col-12 align-center">
                     <div class="table-details">
                         <h1 style="color: var(--orange);font-size: 80px;">30% OFF</h1>
-                        <h3 style="font-size: 30px;">For Online Reservation</h3>
-                        <p>Online registration for a table at Cappe offers convenience, saves time, guarantees
+                        <h3 class="sub-heading" style="text-decoration: none; font-size: 30px;">For Online Reservation</h3>
+                        <p class="content">Online registration for a table at Cappe offers convenience, saves time, guarantees
                             seating, provides access to exclusive promotions, allows for personalized experiences
                             tailored to your preferences. Enjoy hassle-free visits!</p>
                         <ul class="vision-list">
@@ -476,13 +476,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 col-12" style="padding: 0 100px;">
+                <div class="col-md-6 col-12 table-booking-form" style="padding: 0 100px;">
                     <h2 class="sub-heading" style="text-align: center;">Book Your Table</h2>
                     <form action="/server">
                         <label for="sname"></label>
                         <input type="text" id="sname" placeholder="Name">
                         <label for="email"></label>
                         <input type="email" id="email" placeholder="Email">
+                        <label for="date"></label>
                         <input type="text" id="date" placeholder="Date" onfocus="(this.type='date')">
                         <label for="time"></label>
                         <input type="text" id="time" placeholder="Time" onfocus="(this.type='time')">

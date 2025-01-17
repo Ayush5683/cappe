@@ -76,10 +76,10 @@ body {
 .after-image {
     background: url('../img/overlay-bottom.png');
     position: absolute;
-    bottom: -2px;
-    z-index: 10;
+    bottom: -1px;
+    z-index: 1;
     width: 100%;
-    height: 1rem;
+    height: 0.8rem;
 }
 
 .before-image {
@@ -143,13 +143,12 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     display: flex;
     text-align: center;
+    align-items: center ;
     justify-content: center;
 }
 
 .carousel-detail .carousel-detail-box {
     position: relative;
-    top: 45%;
-    height: fit-content;
 }
 
 .carousel-detail .carousel-detail-box h4 {
@@ -242,7 +241,7 @@ body {
 }
 
 .section-details {
-    padding: 0 5px;
+    padding: 0 20px;
 }
 
 .section-details h5 {
@@ -267,6 +266,7 @@ body {
     position: relative;
     background-size: cover;
     padding: 6rem 0;
+    color: var(--white);
 }
 
 .background-details {
@@ -448,6 +448,81 @@ select {
     color: var(--orange);
 }
 
-/* @media screen and (max-width:) {
-    
-} */
+@media screen and (max-width:992px) {
+    /* Special classes starts */
+    .heading{
+        font-size: 3.2rem;
+    }
+    .sub-heading{
+        font-size: 2.2rem;
+    }
+    .about-section,.service-section{
+        padding: 50px 0 20px 0;
+    }
+    /* Special classes ends */
+
+
+    .header{
+        position: relative;
+        background-color: #553a2c;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .header .main-logo h1{
+        font-size: 40px;
+    }
+    .navbar-nav{
+        position: relative;
+        text-align: right;
+    }
+    .logo-column{
+        align-items: flex-start;
+    }
+
+    /* slidearea */
+    .carousel-detail-box h1{
+        font-size: 30px !important;
+    }
+    .carousel-detail-box h4{
+        font-size: 20px !important;
+    }
+
+    /* About section */
+    .about-column{
+        margin: 20px 0;
+    }
+
+    /* background area */
+    .background-details{
+        padding: 0 30px;
+    }
+    .background-details h4{
+        font-size: 1rem;
+        margin-bottom: 10px !important;
+    }
+    .input-group input{
+        height: 50px;
+        padding: 0 0 0 10px !important;
+    }
+    .btn-outline-secondary{
+        height: 50px;
+    }
+
+    /* Book table */
+    .table-details h1{
+        font-size: 60px !important;
+    }
+
+    .table-booking-form{
+        padding:3rem !important;
+    }
+}
+@media screen and (max-width:992px) and (min-width:576px){
+    .about-column img{
+        width: 400px !important;
+    }
+    .menu-images span{
+        top: 30px !important;
+        right: 0px !important;
+    }
+}
