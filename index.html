@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cappe : The best coffee shop near you</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="CSS/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 align-center">
+                    <a href="index.html" class="main-logo">
+                        <h1 style="margin: 0;font-family: var(--lobster-two);">CAPPE</h1>
+                    </a>
+                </div>
+                <div class="col-6 align-center">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#services">Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#menu-price">Menu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pages &nbsp;<i class="fa fa-sort-down"
+                                                style=" position: absolute;"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Carousel start -->
+    <section class="slidearea" style="position: relative;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="padding: 0;">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/carousel-1.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-detail">
+                                    <div class="carousel-detail-box">
+                                        <h4>Fuel your day with our delicious brews</h4>
+                                        <h1>Your daily dose of joy awaits!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carousel-2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-detail">
+                                    <div class="carousel-detail-box">
+                                        <h4>Sip back and relax</h4>
+                                        <h1>Your cozy corner awaits!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="carousel-item">
+                                <img src="img/carousel-3.jpeg" class="d-block w-100" alt="...">
+                            </div> -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <div class="after-image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel End -->
+
+    <!-- About section start  -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 align-justify-center">
+                    <div class="vr-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h1 class="heading">ABOUT US &nbsp;<img src="img/coffee-beans.png" alt="" class="coffee-beans"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h4 class="sub-heading" style="text-decoration: none; margin-bottom: 2rem;">Serving since 2009</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <h3 class="sub-heading">Our Story</h3>
+                    <p class="content">A coffee shop, where every cup tells a story! Founded in 2009, we began as a
+                        small, cozy corner in the heart of the city, fueled by a passion for exceptional coffee and a
+                        desire to create a welcoming space for our community</p>
+                    <p class="content">Join us on this exciting journey as we strive to elevate your coffee experience,
+                        one cup at a time. Thank you for being a part of our story, and we look forward to serving you
+                        for many more years to come!</p>
+                    <button class="btn-outline first-button">Read more</button>
+                </div>
+                <div class="col-md-4 col-12 align-justify-center">
+                    <img src="img/about.png" alt="" width="100%">
+                </div>
+                <div class="col-md-4 col-12">
+                    <h3 class="sub-heading">Our Vision</h3>
+                    <p class="content">At COPPE, our vision is to create a vibrant community hub where coffee lovers can
+                        come together to share experiences, ideas, and inspiration. We believe that coffee is more than
+                        just a beverage; it’s a catalyst for connection, creativity, and conversation. Join us on this
+                        journey as we continue to brew connections.</p>
+                    <ul class="vision-list ">
+                        <li>A welcoming space for connection and conversation.</li>
+                        <li>Finest coffee from ethically sourced beans.</li>
+                        <li>Classic favorites and innovative seasonal drinks.</li>
+                    </ul>
+                    <button class="btn-outline second-button">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section End -->
+
+    <!-- Services section start -->
+    <section class="service-section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 align-justify-center">
+                    <div class="vr-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h1 class="heading">OUR SERVICES &nbsp;<img src="img/coffee-beans.png" alt="" class="coffee-beans">
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h4 class="sub-heading" style="text-decoration: none; margin-bottom: 2rem;">Fresh & Organic Beans
+                    </h4>
+                </div>
+            </div>
+            <div class="row section-row">
+                <div class="col-md-6 col-12 align-center section-column">
+                    <div class="col-sm-5 section-inner-columns align-justify-center">
+                        <img src="img/service-1.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 section-inner-columns align-justify-center">
+                        <div class="section-details">
+                            <h5>
+                                <div class="section-icons align-justify-center">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                Fastest Door Delivery
+                            </h5>
+                            <p>Fast delivery is our promise to keep your day flowing smoothly, whether you're in the
+                                middle of a busy workday, relaxing at home, or on the go.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-center section-column">
+                    <div class="col-sm-5 section-inner-columns align-justify-center">
+                        <img src="img/service-2.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 section-inner-columns">
+                        <div class="section-details">
+                            <h5>
+                                <div class="section-icons align-justify-center">
+                                    <i class="fa fa-coffee"></i>
+                                </div>
+                                Fresh Coffee Beans
+                            </h5>
+                            <p>Our commitment to freshness is unwavering. We roast our beans in small batches, right
+                                here in our shop, allowing us to capture the essence of each unique variety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-row">
+                <div class="col-md-6 col-12 align-center section-column">
+                    <div class="col-sm-5 section-inner-columns align-justify-center">
+                        <img src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 section-inner-columns align-justify-center">
+                        <div class="section-details">
+                            <h5>
+                                <div class="section-icons align-justify-center">
+                                    <i class="fa-solid fa-medal"></i>
+                                </div>
+                                Best Quality Coffee
+                            </h5>
+                            <p>Fast delivery is our promise to keep your day flowing smoothly, whether you're in the
+                                middle of a busy workday, relaxing at home, or on the go.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-center section-column">
+                    <div class="col-sm-5 section-inner-columns align-justify-center">
+                        <img src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 section-inner-columns">
+                        <div class="section-details">
+                            <h5>
+                                <div class="section-icons align-justify-center">
+                                    <i class="fa fa-coffee"></i>
+                                </div>
+                                Fresh Coffee Beans
+                            </h5>
+                            <p>Our commitment to freshness is unwavering. We roast our beans in small batches, right
+                                here in our shop, allowing us to capture the essence of each unique variety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12" style="text-align: center;">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                        style="border-radius: 10px; padding: 15px 30px;">Know More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services section End -->
+
+    <!-- background area Start-->
+    <section class="bg-img">
+        <div class="before-image"></div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-12" style="padding: 0;">
+                    <div class="background-details align-justify-center">
+                        <h1 style="color: var(--orange);font-size: 80px;">50% OFF</h1>
+                        <h3 style="color: var(--white);font-size: 30px;">Sunday Special Offer</h3>
+                        <h4 style="font-family: var(--lobster-two);font-size: 30px; color: var(--white);">Only for
+                            Sunday from 1st Feb to 28th Feb 2025</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="after-image"></div>
+    </section>
+    <!-- background area End -->
+
+    <!-- Menu & Pricing Start -->
+    <section class="menu-pricing-section" id="menu-price">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 align-justify-center">
+                    <div class="vr-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h1 class="heading">Menu & Pricing &nbsp;<img src="img/coffee-beans.png" alt=""
+                            class="coffee-beans">
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h4 class="sub-heading" style="text-decoration: none; margin-bottom: 2rem;">Competitive Pricing
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12" style="text-align: center;">
+                    <h3 class="sub-heading">Hot Coffee</h3>
+                </div>
+                <div class="col-md-6 col-12" style="text-align: center;">
+                    <h3 class="sub-heading">Cold Coffee</h3>
+                </div>
+            </div>
+            <div class="row section-row">
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-1-1.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Black Coffee
+                            </h5>
+                            <p>Savor the rich, bold essence of our hot black coffee, where every sip is a journey into
+                                pure, unadulterated flavor!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-1-2.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Black Coffee
+                            </h5>
+                            <p>Revitalize your senses with our cold black coffee, a smooth and invigorating brew that’s
+                                perfect for any time of day!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-row">
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-2-1.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Chocolete Coffee
+                            </h5>
+                            <p>Indulge in the velvety richness of our hot chocolate coffee, where decadent chocolate
+                                meets the perfect espresso for a blissful treat!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-2-2.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Chocolate Coffee
+                            </h5>
+                            <p>Delight in our cold chocolate coffee, a luscious blend of smooth chocolate and refreshing
+                                coffee that’s a sweet escape in every sip!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-row">
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-3-1.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Coffee With Milk
+                            </h5>
+                            <p>Warm your soul with our hot coffee with milk, a comforting blend of rich coffee and
+                                creamy goodness that’s pure bliss in a cup!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-center">
+                    <div class="col-3">
+                        <div class="menu-images">
+                            <img src="img/menu-3-2.png" alt="">
+                            <span class="position-absolute translate-middle rounded-circle align-justify-center">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;30.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="section-details">
+                            <h5>
+                                Chocolate Coffee
+                            </h5>
+                            <p>Cool off with our creamy cold coffee with milk, a delightful fusion of rich coffee and
+                                velvety smoothness that’s simply irresistible!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12" style="text-align: center;">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                        style="border-radius: 10px; padding: 15px 30px;">Know More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Menu & Pricing End -->
+
+    <!-- Book Table start-->
+    <section id="book-table">
+        <div class="container book-table">
+            <div class="before-image"></div>
+            <div class="row">
+                <div class="col-md-6 col-12 align-center">
+                    <div class="table-details">
+                        <h1 style="color: var(--orange);font-size: 80px;">30% OFF</h1>
+                        <h3 style="font-size: 30px;">For Online Reservation</h3>
+                        <p>Online registration for a table at Cappe offers convenience, saves time, guarantees
+                            seating, provides access to exclusive promotions, allows for personalized experiences
+                            tailored to your preferences. Enjoy hassle-free visits!</p>
+                        <ul class="vision-list">
+                            <li>Reserve your spot anytime, anywhere.</li>
+                            <li>Skip the wait, enjoy faster service.</li>
+                            <li>Secure your table in advance.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12" style="padding: 0 100px;">
+                    <h2 class="sub-heading" style="text-align: center;">Book Your Table</h2>
+                    <form action="/server">
+                        <label for="sname"></label>
+                        <input type="text" id="sname" placeholder="Name">
+                        <label for="email"></label>
+                        <input type="email" id="email" placeholder="Email">
+                        <label for="date"></label>
+                        <input type="date" id="date" placeholder="Date">
+                        <label for="time"></label>
+                        <input type="time" id="time" placeholder="Time">
+                        <label for="person"></label>
+                        <select name="persons" id="persons">
+                            <option value="">Persons</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="five-plus">More than 5</option>
+                        </select>
+                        <label for="submit"></label>
+                        <button id="submit">Book Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="after-image"></div>
+        </div>
+    </section>
+    <!-- Book Table End-->
+
+
+    <!--  -->
+    <!-- Testimonial -->
+    <!--  -->
+
+    <!-- Footer start -->
+    <footer class="footer" id="footer">
+        <div class="before-image"></div>
+        <div class="container-fluid">
+            <div class="row footer-one">
+                <div class="col-md-3 col-12 section-column">
+                    <div class="footer-one-box">
+                        <h2>GET IN TOUCH</h2>
+                        <p><a href="#"><i class="fa-solid fa-location-dot"></i> &nbsp;147 Street , XYZ, JSR</a></p>
+                        <p><a href="tel:78703255"><i class="fa-solid fa-phone"></i>&nbsp;+91 78703255</a></p>
+                        <p><a href="mailto:cappeshop@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                &nbsp;cappeshop@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 section-column">
+                    <div class="footer-one-box icons-box">
+                        <h2>FOLLOW US</h2>
+                        <p>Sip, savor, and stay connected with us on social media for the latest brews and news!</p>
+                        <div>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 section-column">
+                    <div class="footer-one-box timing-box">
+                        <h2>Open Hours</h2>
+                        <span class="timing-section">
+                            <p class="margin-0">MONDAY - FRIDAY</p>
+                            <p style="margin:0 0 10px 0;">8.00 AM - 8.00 PM</p>
+                        </span>
+                        <span>
+                            <p class="margin-0">SAUR1DAY - SUNDAY</p>
+                            <p class="margin-0">2.00 PM - 8.00 PM</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 section-column">
+                    <div class="footer-one-box">
+                        <h2>NEWSLETTER</h2>
+                        <p>Stay brewed in with our coffee shop newsletter for exclusive deals and the latest beans!</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2" style="border-radius: 0;">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-two">
+                <hr>
+            </div>
+            <div class="row footer-three">
+                <div class="col-12">
+                    <p style="text-align: center;">Copyright &copy <a href="">cappe.in</a> All Rights Reserved.</p>
+                    <p style="text-align: center;">Designed by <a href="tel:7870325535">Ayush Kumar</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
