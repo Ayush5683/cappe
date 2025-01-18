@@ -69,23 +69,52 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col" style="padding: 0;">
-                    <div id="carouselExample" class="carousel slide">
+                    <div id="carouselExample" class="carousel slide auto-slide-time">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/carousel-1.jpg" class="d-block w-100" alt="...">
+                                <img src="img/carousel-1.jpg" class="d-block w-100" alt="">
                                 <div class="carousel-detail">
                                     <div class="carousel-detail-box">
                                         <h4>Fuel your day with our delicious brews</h4>
                                         <h1>Your daily dose of joy awaits!</h1>
+                                        <!-- <h4>Sip back and relax</h4>
+                                        <h1>Your cozy corner awaits!</h1> -->
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/carousel-2.jpg" class="d-block w-100" alt="...">
+                                <img src="img/carousel-2.jpg" class="d-block w-100" alt="">
                                 <div class="carousel-detail">
                                     <div class="carousel-detail-box">
-                                        <h4>Sip back and relax</h4>
-                                        <h1>Your cozy corner awaits!</h1>
+                                        <h4>Sip and smile, let the magic unfold</h4>
+                                        <h1>A cup of comfort, pure and bold!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carousel-3.png" class="d-block w-100" alt="">
+                                <div class="carousel-detail">
+                                    <div class="carousel-detail-box">
+                                        <h4>Savor every sip, feel the cheer</h4>
+                                        <h1>A cup of happiness is near!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carousel-4.png" class="d-block w-100" alt="">
+                                <div class="carousel-detail">
+                                    <div class="carousel-detail-box">
+                                        <h4>Brewed to perfection, just for you</h4>
+                                        <h1>The warmth of joy in every hue!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carousel-5.png" class="d-block w-100" alt="">
+                                <div class="carousel-detail">
+                                    <div class="carousel-detail-box">
+                                        <h4>Awaken your senses, start your day</h4>
+                                        <h1>A taste of bliss is on the way!</h1>
                                     </div>
                                 </div>
                             </div>
@@ -333,7 +362,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Black Coffee
@@ -353,7 +382,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Chocolete Coffee
@@ -372,7 +401,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Coffee With Milk
@@ -394,7 +423,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Black Coffee
@@ -414,7 +443,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Chocolate Coffee
@@ -434,7 +463,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 menu-section-column">
                             <div class="section-details">
                                 <h5>
                                     Chocolate Coffee
@@ -465,8 +494,10 @@
                 <div class="col-md-6 col-12 align-center">
                     <div class="table-details">
                         <h1 style="color: var(--orange);font-size: 80px;">30% OFF</h1>
-                        <h3 class="sub-heading" style="text-decoration: none; font-size: 30px;">For Online Reservation</h3>
-                        <p class="content">Online registration for a table at Cappe offers convenience, saves time, guarantees
+                        <h3 class="sub-heading" style="text-decoration: none; font-size: 30px;">For Online Reservation
+                        </h3>
+                        <p class="content">Online registration for a table at Cappe offers convenience, saves time,
+                            guarantees
                             seating, provides access to exclusive promotions, allows for personalized experiences
                             tailored to your preferences. Enjoy hassle-free visits!</p>
                         <ul class="vision-list">
@@ -581,6 +612,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        const myCarouselElement = document.querySelector('.auto-slide-time')
+
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 2000,
+            touch: false
+        })
+    </script>
 </body>
 
 </html>
