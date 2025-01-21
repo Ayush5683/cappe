@@ -25,6 +25,10 @@ body {
     font-family: var(--montserrat);
 }
 
+/* body p::selection, h1::selection {
+    color: rgb(187, 255, 0) !important;
+    background-color: black;
+} */
 
 /* Special classes */
 .margin-0 {
@@ -99,6 +103,10 @@ body {
 .section-column {
     padding: 0;
     margin: 20px 0;
+}
+
+.overflow-hide {
+    overflow: hidden !important;
 }
 
 /* Special classes End*/
@@ -232,16 +240,12 @@ body {
 
 .section-inner-columns img {
     width: 13rem;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: all 0.2s;
 }
 
-.section-inner-columns img:hover {
-    border-radius: 0;
-}
-
 .section-details {
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .section-details h5 {
@@ -259,6 +263,41 @@ body {
     justify-content: space-between;
     margin: 3rem 0;
 }
+
+.service-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.position-top {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(to bottom left, var(--bg-color) 50%, transparent 50%);
+    top: 0px;
+    right: 0px;
+    transition: all 0.2s linear;
+}
+
+.position-bottom {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(to bottom right, transparent 50%, var(--bg-color) 50%);
+    bottom: 0px;
+    right: 0px;
+    transition: all 0.2s linear;
+}
+
+.service-image:hover .position-top {
+    top: -100px;
+}
+
+
+.service-image:hover .position-bottom {
+    right: -100px;
+}
+
 
 /* background section */
 .bg-img {
@@ -303,13 +342,17 @@ body {
 /* Menu & Pricing  */
 
 .menu-images {
+    max-width: fit-content;
     position: relative;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .menu-images img {
-    width: 90%;
-    height: 90%;
+    height: 8rem;
+    width: 8rem;
     border-radius: 50%;
 }
 
@@ -317,16 +360,48 @@ body {
     width: 40px;
     height: 40px;
     top: 25px;
-    right: -10px !important;
-    z-index: 500;
+    right: -20px !important;
+    z-index: 10;
     background-color: var(--orange);
     font-size: 12px;
     color: var(--white);
+    transition: all 0.2s linear;
 }
+
+.menu-images:hover span {
+    width: 8.3rem;
+    height: 8.3rem;
+    right: -75px !important;
+    top: 65px;
+    padding: 20px 0 70px 0;
+}
+
+.fav-view-hover {
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    top: 120px;
+    transition: all 0.5s 0.3s;
+    z-index: 15;
+}
+
+.menu-images:hover .fav-view-hover {
+    top: 45px;
+}
+
+.fa-heart {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* .heart-check-box:checked~.fa-heart {
+    color: red !important;
+} */
 
 .menu-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 50px 0;
 }
 
@@ -466,10 +541,18 @@ select {
 
     /* Special classes ends */
 
+    .button-nav {
+        width: 100%;
+        text-align: right;
+    }
+
+    .button-nav button:focus {
+        border: none;
+    }
 
     .header {
         position: relative;
-        background-color: #553a2c;
+        background-color: #33211D;
         padding: 10px;
         justify-content: space-between;
     }
@@ -488,6 +571,10 @@ select {
     }
 
     /* slidearea */
+    .carousel-detail-box {
+        width: 70%;
+    }
+
     .carousel-detail-box h1 {
         font-size: 30px !important;
     }
@@ -522,11 +609,23 @@ select {
 
     /* Book table */
     .table-details h1 {
-        font-size: 60px !important;
+        font-size: 3.5rem !important;
     }
 
     .table-booking-form {
         padding: 3rem !important;
+    }
+}
+
+@media screen and (max-width:1200px) and (min-width:992px) {
+    .menu-images span {
+        right: -40px !important;
+
+    }
+
+    .menu-images:hover span {
+        top: 65px !important;
+        right: -85px !important;
     }
 }
 
@@ -537,7 +636,19 @@ select {
 
     .menu-images span {
         top: 30px !important;
-        right: 0px !important;
+    }
+
+    .menu-images:hover span {
+        top: 65px !important;
+        right: -70px !important;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .menu-images:hover span {
+        top: 65px !important;
+        right: -70px !important;
     }
 }
 
