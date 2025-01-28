@@ -208,7 +208,7 @@ body {
 }
 
 .carousel-detail .carousel-detail-box h4 {
-    color: var(--bg-color);
+    color: var(--white);
     font-size: 1.875rem;
 }
 
@@ -224,12 +224,6 @@ body {
     padding: 5rem 0 3rem 0;
 }
 
-.vr-line {
-    width: 0.13rem;
-    height: 5rem;
-    background-color: var(--orange);
-    display: inline-block;
-}
 
 .vision-list {
     list-style: url('../img/check.png');
@@ -288,7 +282,6 @@ body {
 
 .section-inner-columns img {
     width: 13rem;
-    /* border-radius: 20px; */
     transition: all 0.2s;
 }
 
@@ -362,7 +355,6 @@ body {
 }
 
 .background-details .input-group {
-    /* width: 100%; */
     max-width: fit-content;
     height: 4rem;
     margin-top: 20px;
@@ -388,7 +380,6 @@ body {
 }
 
 /* Menu & Pricing  */
-
 .menu-images {
     max-width: fit-content;
     position: relative;
@@ -455,7 +446,6 @@ body {
 
 
 /* book table */
-
 .book-table {
     padding: 5rem 0rem;
     background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/bg.jpg);

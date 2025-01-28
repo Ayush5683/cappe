@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cappe : About</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="CSS/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="CSS/menu.css"> -->
+    <link rel="stylesheet" href="CSS/about.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="header" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6 align-center logo-column">
+                    <a href="index.html" class="main-logo">
+                        <h1 class="" style="margin: 0;font-family: var(--lobster-two);">CAPPE</h1>
+                    </a>
+                </div>
+                <div class="col-md-9 col-6 align-center" style="justify-content: flex-end;">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <div class="button-nav">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fa-solid fa-bars" style="color: var(--white);"></i>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="service.html">Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="menu.html">Menu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a onclick="subnav_show()" class="nav-link" href="#">Pages &nbsp;<i
+                                                class="fa fa-sort-down" id="fa-sort-down"
+                                                style=" position: absolute; transition: all 0.3s;"></i></a>
+                                        <ul class="sub-nav" id="sub-nav">
+                                            <li class="nav-item"><a class="nav-link" href="">page 1</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="">page 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Carousel start -->
+    <section class="slidearea" style="position: relative;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="padding: 0;">
+                    <div class="carousel-detail">
+                        <div class="carousel-detail-box">
+                            <h1 class="heading">ABOUT &nbsp;US &nbsp;
+                                <img src="img/coffee-beans.png" alt="" class="coffee-beans">
+                            </h1>
+                            <h4>
+                                <span class="index-name">Index</span>
+                                <span>About</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="after-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel End -->
+
+    <!-- About section start  -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 align-justify-center">
+                    <div class="vr-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h1 class="heading">ABOUT US &nbsp;<img src="img/coffee-beans.png" alt="" class="coffee-beans"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <h4 class="sub-heading" style="text-decoration: none; margin-bottom: 2rem;">Serving since 2009</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-12 about-column">
+                    <h3 class="sub-heading">Our Story</h3>
+                    <p class="content">A coffee shop, where every cup tells a story! Founded in 2009, we began as a
+                        small, cozy corner in the heart of the city, fueled by a passion for exceptional coffee and a
+                        desire to create a welcoming space for our community</p>
+                    <p class="content">Join us on this exciting journey as we strive to elevate your coffee experience,
+                        one cup at a time. Thank you for being a part of our story, and we look forward to serving you
+                        for many more years to come!</p>
+                    <button onclick="window.open('about.html','_self')" class="btn-outline first-button">Read more</button>
+                </div>
+                <div class="col-lg-4 col-12 align-justify-center about-column">
+                    <img src="img/about.png" alt="" width="100%">
+                </div>
+                <div class="col-lg-4 col-12 about-column">
+                    <h3 class="sub-heading">Our Vision</h3>
+                    <p class="content">At COPPE, our vision is to create a vibrant community hub where coffee lovers can
+                        come together to share experiences, ideas, and inspiration. We believe that coffee is more than
+                        just a beverage; it’s a catalyst for connection, creativity, and conversation. Join us on this
+                        journey as we continue to brew connections.</p>
+                    <ul class="vision-list ">
+                        <li>A welcoming space for connection and conversation.</li>
+                        <li>Finest coffee from ethically sourced beans.</li>
+                        <li>Classic favorites and innovative seasonal drinks.</li>
+                    </ul>
+                    <button onclick="window.open('about.html', '_self')" class="btn-outline second-button">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section End -->
+
+    <!--  -->
+    <!-- Testimonial -->
+    <!--  -->
+
+    <!-- Footer start -->
+    <footer class="footer" id="footer">
+        <div class="before-image"></div>
+        <div class="container-fluid">
+            <div class="row footer-one">
+                <div class="col-md-6 col-xl-3 col-12 section-column">
+                    <div class="footer-one-box">
+                        <h2>GET IN TOUCH</h2>
+                        <p><a href="#"><i class="fa-solid fa-location-dot"></i> &nbsp;147 Street , XYZ, JSR</a></p>
+                        <p><a href="tel:78703255"><i class="fa-solid fa-phone"></i>&nbsp;+91 78703255</a></p>
+                        <p><a href="mailto:cappeshop@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                &nbsp;cappeshop@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 col-12 section-column">
+                    <div class="footer-one-box icons-box">
+                        <h2>FOLLOW US</h2>
+                        <p>Sip, savor, and stay connected with us on social media for the latest brews and news!</p>
+                        <div>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 col-12 section-column">
+                    <div class="footer-one-box timing-box">
+                        <h2>Open Hours</h2>
+                        <span class="timing-section">
+                            <p class="margin-0">MONDAY - FRIDAY</p>
+                            <p style="margin:0 0 10px 0;">8.00 AM - 8.00 PM</p>
+                        </span>
+                        <span>
+                            <p class="margin-0">SAUR1DAY - SUNDAY</p>
+                            <p class="margin-0">2.00 PM - 8.00 PM</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 col-12 section-column">
+                    <div class="footer-one-box">
+                        <h2>NEWSLETTER</h2>
+                        <p>Stay brewed in with our coffee shop newsletter for exclusive deals and the latest beans!</p>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2"
+                                style="border-radius: 0;">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-two">
+                <hr>
+            </div>
+            <div class="row footer-three">
+                <div class="col-12">
+                    <p style="text-align: center;">Copyright &copy <a href="">cappe.in</a> All Rights Reserved.</p>
+                    <p style="text-align: center;">Designed by <a href="tel:7870325535">Ayush Kumar</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- reach to top -->
+    <div class="to-top">
+        <a href="#"><i class="fa fa-angle-double-up "></i></a>
+    </div>
+    <!-- reach to top -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const myCarouselElement = document.querySelector('.auto-slide-time')
+
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 2000,
+            touch: false
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
