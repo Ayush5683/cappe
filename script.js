@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dateText = document.getElementById("date");
   const timeText = document.getElementById("time");
 
-  // Hidden native pickers
+  // Create hidden native pickers
   const hiddenDate = document.createElement("input");
   hiddenDate.type = "date";
   hiddenDate.style.position = "fixed";
@@ -46,7 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(hiddenDate);
   document.body.appendChild(hiddenTime);
 
-  // --- Date picker ---
+  // 🔹 Set minimum date = today
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, "0");
+  const dd = String(today.getDate()).padStart(2, "0");
+  hiddenDate.min = `${yyyy}-${mm}-${dd}`;
+
+  // --- DATE PICKER ---
   dateText.addEventListener("click", () => {
     hiddenDate.focus({ preventScroll: true });
     hiddenDate.showPicker();
@@ -57,22 +64,49 @@ document.addEventListener("DOMContentLoaded", function () {
     if (value) {
       const [year, month, day] = value.split("-");
       dateText.value = `${day}-${month}-${year}`; // dd-mm-yyyy
+
+      // Reset time when date changes
+      timeText.value = "";
+      hiddenTime.value = "";
     }
   });
 
-  // --- Time picker ---
+  // --- TIME PICKER ---
   timeText.addEventListener("click", () => {
+    if (!hiddenDate.value) {
+      alert("Please select a date first!");
+      return;
+    }
+
+    // If selected date is today, block past times
+    const selectedDate = new Date(hiddenDate.value);
+    const now = new Date();
+
+    if (
+      selectedDate.getFullYear() === now.getFullYear() &&
+      selectedDate.getMonth() === now.getMonth() &&
+      selectedDate.getDate() === now.getDate()
+    ) {
+      // Set min time = current time rounded up to next 5 min
+      now.setMinutes(now.getMinutes() + 5);
+      const minHours = String(now.getHours()).padStart(2, "0");
+      const minMinutes = String(now.getMinutes()).padStart(2, "0");
+      hiddenTime.min = `${minHours}:${minMinutes}`;
+    } else {
+      hiddenTime.removeAttribute("min");
+    }
+
     hiddenTime.focus({ preventScroll: true });
     hiddenTime.showPicker();
   });
 
   hiddenTime.addEventListener("change", () => {
-    const timeValue = hiddenTime.value; // HH:MM (24hr)
+    const timeValue = hiddenTime.value; // HH:MM
     if (timeValue) {
       const [hourStr, minute] = timeValue.split(":");
       let hour = parseInt(hourStr, 10);
       const ampm = hour >= 12 ? "PM" : "AM";
-      hour = hour % 12 || 12; // convert to 12-hour format
+      hour = hour % 12 || 12;
       const formattedTime = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
       timeText.value = formattedTime;
     }
