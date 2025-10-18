@@ -112,3 +112,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+const personsSelect = document.getElementById("persons");
+
+personsSelect.addEventListener("change", function () {
+    if (this.value === "more") {
+        // Replace select with input box
+        const numberInput = document.createElement("input");
+        numberInput.type = "number";
+        numberInput.id = "persons-input";
+        numberInput.placeholder = "Enter number of persons (11-50)";
+        numberInput.min = 11;
+        numberInput.max = 50;
+        numberInput.required = true;
+
+        // Replace select with number input in DOM
+        this.parentNode.replaceChild(numberInput, this);
+
+        // Listen for value change to enforce max 50
+        numberInput.addEventListener("input", function () {
+            if (this.value > 50) {
+                alert("Maximum 50 seats can be booked!");
+                this.value = ""; // clear invalid input
+            }
+        });
+    }
+});
+
+
