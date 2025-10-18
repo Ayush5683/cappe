@@ -31,31 +31,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create hidden inputs for native pickers
   const hiddenDate = document.createElement("input");
   hiddenDate.type = "date";
-  hiddenDate.style.position = "absolute";
+  hiddenDate.style.position = "fixed";   // keep fixed in viewport
+  hiddenDate.style.top = "0";
+  hiddenDate.style.left = "-9999px";     // move off-screen
   hiddenDate.style.opacity = "0";
-  hiddenDate.style.pointerEvents = "none";
 
   const hiddenTime = document.createElement("input");
   hiddenTime.type = "time";
-  hiddenTime.style.position = "absolute";
+  hiddenTime.style.position = "fixed";
+  hiddenTime.style.top = "0";
+  hiddenTime.style.left = "-9999px";
   hiddenTime.style.opacity = "0";
-  hiddenTime.style.pointerEvents = "none";
 
   document.body.appendChild(hiddenDate);
   document.body.appendChild(hiddenTime);
 
-  // When user clicks text field → open hidden input picker
+  // When user clicks visible field → open hidden input picker
   dateText.addEventListener("click", () => {
-    hiddenDate.focus();
+    hiddenDate.focus({ preventScroll: true }); // prevent scrolling
     hiddenDate.showPicker();
   });
 
   timeText.addEventListener("click", () => {
-    hiddenTime.focus();
+    hiddenTime.focus({ preventScroll: true });
     hiddenTime.showPicker();
   });
 
-  // When a value is picked, reflect it in visible field
+  // When user picks a value, reflect it back
   hiddenDate.addEventListener("change", () => {
     dateText.value = hiddenDate.value;
   });
