@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dateText = document.getElementById("date");
   const timeText = document.getElementById("time");
 
-  // Create hidden inputs for native pickers
+  // Hidden native pickers
   const hiddenDate = document.createElement("input");
   hiddenDate.type = "date";
   hiddenDate.style.position = "fixed";
@@ -46,29 +46,33 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(hiddenDate);
   document.body.appendChild(hiddenTime);
 
-  // --- Date ---
+  // --- Date picker ---
   dateText.addEventListener("click", () => {
     hiddenDate.focus({ preventScroll: true });
     hiddenDate.showPicker();
   });
 
   hiddenDate.addEventListener("change", () => {
-    dateText.value = hiddenDate.value;
+    const value = hiddenDate.value; // yyyy-mm-dd
+    if (value) {
+      const [year, month, day] = value.split("-");
+      dateText.value = `${day}-${month}-${year}`; // dd-mm-yyyy
+    }
   });
 
-  // --- Time ---
+  // --- Time picker ---
   timeText.addEventListener("click", () => {
     hiddenTime.focus({ preventScroll: true });
     hiddenTime.showPicker();
   });
 
   hiddenTime.addEventListener("change", () => {
-    const timeValue = hiddenTime.value; // "HH:MM"
+    const timeValue = hiddenTime.value; // HH:MM (24hr)
     if (timeValue) {
       const [hourStr, minute] = timeValue.split(":");
       let hour = parseInt(hourStr, 10);
       const ampm = hour >= 12 ? "PM" : "AM";
-      hour = hour % 12 || 12; // convert to 12-hour
+      hour = hour % 12 || 12; // convert to 12-hour format
       const formattedTime = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
       timeText.value = formattedTime;
     }
