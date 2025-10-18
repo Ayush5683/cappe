@@ -503,6 +503,22 @@ select {
     background-color: var(--orange-dark);
 }
 
+/* Fix Chrome/Edge autofill background color */
+.book-table input:-webkit-autofill,
+.book-table input:-webkit-autofill:hover,
+.book-table input:-webkit-autofill:focus,
+.book-table input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
+    -webkit-text-fill-color: var(--bg-color) !important;
+    transition: background-color 9999s ease-in-out 0s; /* prevent white flash */
+}
+
+/* Optional (for Firefox)*/
+.book-table input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
+    -moz-text-fill-color: var(--bg-color) !important;
+}
+
 /* Footer */
 .footer {
     background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/bg.jpg);
@@ -715,4 +731,5 @@ select {
         align-items: center;
         justify-content: center;
     }
+
 }
