@@ -503,6 +503,15 @@ select {
     background-color: var(--orange-dark);
 }
 
+#persons-input {
+    width: 100% !important;
+    outline: none;
+    background-color: var(--transparent);
+    border: solid 2px var(--orange);
+    color: var(--bg-color);
+    padding: 10px 20px;
+}
+
 /* Fix Chrome/Edge autofill background color */
 .book-table input:-webkit-autofill,
 .book-table input:-webkit-autofill:hover,
@@ -733,3 +742,4 @@ select {
     }
 
 }
+
