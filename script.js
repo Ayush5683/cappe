@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create hidden inputs for native pickers
   const hiddenDate = document.createElement("input");
   hiddenDate.type = "date";
-  hiddenDate.style.position = "fixed";   // keep fixed in viewport
+  hiddenDate.style.position = "fixed";
   hiddenDate.style.top = "0";
-  hiddenDate.style.left = "-9999px";     // move off-screen
+  hiddenDate.style.left = "-9999px";
   hiddenDate.style.opacity = "0";
 
   const hiddenTime = document.createElement("input");
@@ -46,23 +46,31 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(hiddenDate);
   document.body.appendChild(hiddenTime);
 
-  // When user clicks visible field → open hidden input picker
+  // --- Date ---
   dateText.addEventListener("click", () => {
-    hiddenDate.focus({ preventScroll: true }); // prevent scrolling
+    hiddenDate.focus({ preventScroll: true });
     hiddenDate.showPicker();
   });
 
+  hiddenDate.addEventListener("change", () => {
+    dateText.value = hiddenDate.value;
+  });
+
+  // --- Time ---
   timeText.addEventListener("click", () => {
     hiddenTime.focus({ preventScroll: true });
     hiddenTime.showPicker();
   });
 
-  // When user picks a value, reflect it back
-  hiddenDate.addEventListener("change", () => {
-    dateText.value = hiddenDate.value;
-  });
-
   hiddenTime.addEventListener("change", () => {
-    timeText.value = hiddenTime.value;
+    const timeValue = hiddenTime.value; // "HH:MM"
+    if (timeValue) {
+      const [hourStr, minute] = timeValue.split(":");
+      let hour = parseInt(hourStr, 10);
+      const ampm = hour >= 12 ? "PM" : "AM";
+      hour = hour % 12 || 12; // convert to 12-hour
+      const formattedTime = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
+      timeText.value = formattedTime;
+    }
   });
 });
