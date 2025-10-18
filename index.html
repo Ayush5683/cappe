@@ -643,15 +643,15 @@
                     <h2 class="sub-heading" style="color: var(--bg-color); text-align: center;">Book Your Table</h2>
                     <form action="/server">
                         <label for="sname"></label>
-                        <input type="text" id="sname" placeholder="Name">
+                        <input type="text" id="sname" placeholder="Name" required>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email">
+                        <input type="email" id="email" placeholder="Email" required>
                         <label for="date"></label>
-                        <input type="text" id="date" placeholder="Date">
+                        <input type="text" id="date" placeholder="Date" readonly required>
                         <label for="time"></label>
-                        <input type="text" id="time" placeholder="Time">
+                        <input type="text" id="time" placeholder="Time" readonly required>
                         <label for="person"></label>
-                        <select name="persons" id="persons">
+                        <select name="persons" id="persons" required>
                             <option value="">Persons</option>
                             <option value="one">1</option>
                             <option value="two">2</option>
@@ -769,6 +769,7 @@
 
 
 </html>
+
 
 
 
