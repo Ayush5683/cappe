@@ -27,8 +27,9 @@ window.addEventListener("scroll" , () =>{
 document.addEventListener("DOMContentLoaded", function () {
   const dateText = document.getElementById("date");
   const timeText = document.getElementById("time");
+  const personsSelect = document.getElementById("persons");
 
-  // Create hidden native pickers
+  // 🔹 Create hidden native pickers
   const hiddenDate = document.createElement("input");
   hiddenDate.type = "date";
   hiddenDate.style.position = "fixed";
@@ -64,8 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (value) {
       const [year, month, day] = value.split("-");
       dateText.value = `${day}-${month}-${year}`; // dd-mm-yyyy
-
-      // Reset time when date changes
       timeText.value = "";
       hiddenTime.value = "";
     }
@@ -74,11 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- TIME PICKER ---
   timeText.addEventListener("click", () => {
     if (!hiddenDate.value) {
-      alert("Please select a date first!");
+      showAlert("Please select a date first!");
       return;
     }
 
-    // If selected date is today, block past times
     const selectedDate = new Date(hiddenDate.value);
     const now = new Date();
 
@@ -87,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedDate.getMonth() === now.getMonth() &&
       selectedDate.getDate() === now.getDate()
     ) {
-      // Set min time = current time rounded up to next 5 min
       now.setMinutes(now.getMinutes() + 5);
       const minHours = String(now.getHours()).padStart(2, "0");
       const minMinutes = String(now.getMinutes()).padStart(2, "0");
@@ -101,17 +98,53 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   hiddenTime.addEventListener("change", () => {
-    const timeValue = hiddenTime.value; // HH:MM
+    const timeValue = hiddenTime.value;
     if (timeValue) {
       const [hourStr, minute] = timeValue.split(":");
       let hour = parseInt(hourStr, 10);
       const ampm = hour >= 12 ? "PM" : "AM";
       hour = hour % 12 || 12;
-      const formattedTime = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
-      timeText.value = formattedTime;
+      timeText.value = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
+    }
+  });
+
+  // --- Persons selector ---
+  personsSelect.addEventListener("change", function () {
+    if (this.value === "more") {
+      const numberInput = document.createElement("input");
+      numberInput.type = "number";
+      numberInput.id = "persons-input";
+      numberInput.placeholder = "Enter number of persons (11–50)";
+      numberInput.min = 11;
+      numberInput.max = 50;
+      numberInput.required = true;
+
+      this.parentNode.replaceChild(numberInput, this);
+
+      numberInput.addEventListener("input", function () {
+        if (this.value > 50) {
+          showAlert("Maximum 50 seats can be booked!");
+          this.value = "";
+        }
+      });
     }
   });
 });
+
+// --- Custom CAPPE alert function ---
+function showAlert(message) {
+  const alertBox = document.getElementById("customAlert");
+  const alertMessage = document.getElementById("alertMessage");
+  const alertOk = document.getElementById("alertOk");
+
+  alertMessage.textContent = message;
+  alertBox.style.display = "flex";
+
+  alertOk.onclick = () => {
+    alertBox.style.display = "none";
+  };
+}
+
 
 
 
@@ -150,5 +183,6 @@ personsSelect.addEventListener("change", function () {
         });
     }
 });
+
 
 
