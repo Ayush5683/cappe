@@ -619,7 +619,6 @@
     <!-- Menu & Pricing End -->
 
     <!-- Book Table start-->
-    <!-- Book Table start-->
 <section class="book-table" id="book-table">
   <div class="before-image"></div>
   <div class="container">
@@ -646,6 +645,8 @@
         <form id="bookingForm" action="/server">
           <input type="text" id="sname" placeholder="Name" required>
           <input type="email" id="email" placeholder="Email" required>
+
+          <!-- Date & Time visible fields (readonly: must use picker) -->
           <input type="text" id="date" placeholder="Date" readonly required>
           <input type="text" id="time" placeholder="Time" readonly required>
 
@@ -673,11 +674,11 @@
 </section>
 
 <!-- Custom Alert Box -->
-<div id="customAlert" class="custom-alert">
-  <div class="alert-content">
-    <h3>CAPPE</h3>
+<div id="customAlert" class="custom-alert" aria-hidden="true">
+  <div class="alert-content" role="dialog" aria-modal="true" aria-labelledby="alertTitle">
+    <h3 id="alertTitle">CAPPE</h3>
     <p id="alertMessage"></p>
-    <button id="alertOk">OK</button>
+    <button id="alertOk" type="button">OK</button>
   </div>
 </div>
 <!-- Book Table End -->
@@ -775,6 +776,7 @@
 
 
 </html>
+
 
 
 
