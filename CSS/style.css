@@ -454,7 +454,7 @@ body {
 }
 
 
-/* book table */
+/* book table start */
 
 .book-table {
   padding: 5rem 0rem;
@@ -472,13 +472,14 @@ body {
 }
 
 .book-table input,
-select {
+.book-table select {
   width: 100% !important;
   outline: none;
   background-color: var(--transparent);
   border: solid 2px var(--orange);
   color: var(--bg-color);
   padding: 10px 20px;
+  margin: 10px 0;
 }
 
 .book-table input::placeholder {
@@ -523,7 +524,7 @@ select {
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  max-width: 300px;
+  max-width: 320px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -556,23 +557,24 @@ select {
   padding: 10px 20px;
 }
 
-
 /* Fix Chrome/Edge autofill background color */
 .book-table input:-webkit-autofill,
 .book-table input:-webkit-autofill:hover,
 .book-table input:-webkit-autofill:focus,
 .book-table input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
-    -webkit-text-fill-color: var(--bg-color) !important;
-    transition: background-color 9999s ease-in-out 0s; /* prevent white flash */
+  -webkit-box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
+  -webkit-text-fill-color: var(--bg-color) !important;
+  transition: background-color 9999s ease-in-out 0s; /* prevent white flash */
 }
 
-/* Optional (for Firefox)*/
+/* Firefox autofill */
 .book-table input:-moz-autofill {
-    box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
-    -moz-text-fill-color: var(--bg-color) !important;
+  box-shadow: 0 0 0px 1000px var(--transparent) inset !important;
+  -moz-text-fill-color: var(--bg-color) !important;
 }
 
+
+/* book table end */
 /* Footer */
 .footer {
     background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/bg.jpg);
@@ -787,5 +789,6 @@ select {
     }
 
 }
+
 
 
