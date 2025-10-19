@@ -619,62 +619,68 @@
     <!-- Menu & Pricing End -->
 
     <!-- Book Table start-->
-    <section class="book-table" id="book-table">
-        <div class="before-image"></div>
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-6 col-12 align-center">
-                    <div class="table-details">
-                        <h1 style="color: var(--orange);font-size: 80px;">30% OFF</h1>
-                        <h3 class="sub-heading" style="text-decoration: none; font-size: 28px;">For Online Reservation
-                        </h3>
-                        <p class="content">Online registration for a table at Cappe offers convenience, saves time,
-                            guarantees
-                            seating, provides access to exclusive promotions, allows for personalized experiences
-                            tailored to your preferences. Enjoy hassle-free visits!</p>
-                        <ul class="vision-list">
-                            <li>Reserve your spot anytime, anywhere.</li>
-                            <li>Skip the wait, enjoy faster service.</li>
-                            <li>Secure your table in advance.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 table-booking-form" style="padding: 0 100px;">
-                    <h2 class="sub-heading" style="color: var(--bg-color); text-align: center;">Book Your Table</h2>
-                    <form action="/server">
-                        <label for="sname"></label>
-                        <input type="text" id="sname" placeholder="Name" required>
-                        <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <label for="date"></label>
-                        <input type="text" id="date" placeholder="Date" readonly required>
-                        <label for="time"></label>
-                        <input type="text" id="time" placeholder="Time" readonly required>
-                        <label for="person"></label>
-                        <select name="persons" id="persons" required>
-                            <option value="">Persons</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                            <option value="five">5</option>
-                            <option value="six">6</option>
-                            <option value="seven">7</option>
-                            <option value="eight">8</option>
-                            <option value="nine">9</option>
-                            <option value="ten">10</option>
-                            <option value="ten-plus">More than 10</option>
-                        </select>
-                        <label for="submit"></label>
-                        <button id="submit">Book Now</button>
-                    </form>
-                </div>
-            </div>
+    <!-- Book Table start-->
+<section class="book-table" id="book-table">
+  <div class="before-image"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12 align-center">
+        <div class="table-details">
+          <h1 style="color: var(--orange); font-size: 80px;">30% OFF</h1>
+          <h3 class="sub-heading" style="text-decoration: none; font-size: 28px;">For Online Reservation</h3>
+          <p class="content">
+            Online registration for a table at Cappe offers convenience, saves time,
+            guarantees seating, provides access to exclusive promotions, and allows for
+            personalized experiences tailored to your preferences.
+          </p>
+          <ul class="vision-list">
+            <li>Reserve your spot anytime, anywhere.</li>
+            <li>Skip the wait, enjoy faster service.</li>
+            <li>Secure your table in advance.</li>
+          </ul>
         </div>
-        <div class="after-image"></div>
-    </section>
-    <!-- Book Table End-->
+      </div>
 
+      <div class="col-md-6 col-12 table-booking-form" style="padding: 0 100px;">
+        <h2 class="sub-heading" style="color: var(--bg-color); text-align: center;">Book Your Table</h2>
+        <form id="bookingForm" action="/server">
+          <input type="text" id="sname" placeholder="Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="text" id="date" placeholder="Date" readonly required>
+          <input type="text" id="time" placeholder="Time" readonly required>
+
+          <select name="persons" id="persons" required>
+            <option value="">Persons</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="more">More than 10</option>
+          </select>
+
+          <button id="submit" type="submit">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="after-image"></div>
+</section>
+
+<!-- Custom Alert Box -->
+<div id="customAlert" class="custom-alert">
+  <div class="alert-content">
+    <h3>CAPPE</h3>
+    <p id="alertMessage"></p>
+    <button id="alertOk">OK</button>
+  </div>
+</div>
+<!-- Book Table End -->
 
     <!--  -->
     <!-- Testimonial -->
@@ -769,6 +775,7 @@
 
 
 </html>
+
 
 
 
